@@ -37,3 +37,7 @@
     transform: translateY(0px)
   }
 }
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
