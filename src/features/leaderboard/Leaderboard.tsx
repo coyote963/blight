@@ -9,7 +9,7 @@ import { fetchLeaderboard,
     pageSizeSelector
 
 } from './leaderboardSlice';
-
+import formatDate from '../../helpers/formatDate'
 export function Leaderboard() {
     const dispatch = useDispatch();
     const tdmPlayers = useSelector(tdmPlayerSelector);
@@ -22,10 +22,10 @@ export function Leaderboard() {
     const rows = tdmPlayers?.map((player : TDMPlayer, index: number) => {
         return (
             <tr className="h-9" key={index}>
-                <td className="border border-b px-2 py-1 text-xs">{ currentPage * pageSize + index + 1 }</td>
+                <td className="border border-b px-2 py-1 text-xs">{ (currentPage - 1 )*  pageSize + index + 1 }</td>
                 <td className="border border-b px-2 py-1 text-xs">{player.player[0].name[0]}</td>
                 <td className="border border-b px-2 py-1 text-xs">{player.elo}</td>
-                <td className="border border-b px-2 py-1 text-xs">{player.last_updated}</td>
+                <td className="border border-b px-2 py-1 text-xs">{ formatDate(player.last_updated) }</td>
             </tr>
         )
     })

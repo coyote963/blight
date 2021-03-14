@@ -53,3 +53,4 @@ export const tdmPlayerSelector = (state: ApplicationState) => state.leaderboard.
 export const callStateSelector = (state: ApplicationState) => state.leaderboard.leaderboardData.callState;
 export const pageSelector = (state: ApplicationState) => state.leaderboard.leaderboardData.data?.page || 1; 
 export const pageSizeSelector = (state: ApplicationState) => state.leaderboard.leaderboardData.data?.limit || 10;
+export const totalPageSelector = (state: ApplicationState) => state.leaderboard.leaderboardData.data?.totalPages || 10;

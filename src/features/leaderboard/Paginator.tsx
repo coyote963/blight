@@ -1,12 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchLeaderboard, pageSelector } from './leaderboardSlice';
+import { fetchLeaderboard, pageSelector, totalPageSelector } from './leaderboardSlice';
+import { paginationRange } from '../../helpers/range'
 
 export function LeaderboardPaginator() {
     const currentPage = useSelector(pageSelector)
     const dispatch = useDispatch();
+    const totalPages = useSelector(totalPageSelector)
     console.log(currentPage)
-    const pages = Array.from({length: 20}, (x, i) => i + 1 ).map(i => {
+    const pages = paginationRange(currentPage, totalPages ).map(i => {
         
         function changePage(event: any) {
             event.preventDefault()
