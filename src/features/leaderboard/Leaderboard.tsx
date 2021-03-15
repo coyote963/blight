@@ -32,22 +32,18 @@ export function Leaderboard() {
         )
     })
     return (
-        <div className="container mx-auto">
-            <h1  style={{fontFamily: "datale"}} className="text-purple-900 font-display text-2xl sm:text-4xl md:text-5xl xl:text-8xl m-10">{formatDataleRandom("Team Deathmatch Rankings")} </h1>
-            {/* <h1  style={{fontFamily: "datale"}} className="font-display text-9xl m-10">t|0e|3a|2m|1d|2e|1a|3t|0h|3m|2a|2t|1c|2h|0 |1r|0a|3n|2k|3i|1n|2g|3s|2</h1> */}
-            <table className="w-full border-collapse table-auto">
-                <thead>
-                    <tr className="text-left">
-                        <th className="bg-gray-200 text-gray-600 border border-gray-300">#</th>
-                        <th className="bg-gray-200 text-gray-600 border border-gray-300">Name</th>
-                        <th className="bg-gray-200 text-gray-600 border border-gray-300">Elo</th>
-                        <th className="bg-gray-200 text-gray-600 border border-gray-300">Last Updated</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows}
-                </tbody> 
-            </table>
-        </div>
+        <table className="w-full border-collapse table-auto">
+            <thead>
+                <tr className="text-left">
+                    <th className="bg-gray-200 text-gray-600 border border-gray-300">#</th>
+                    <th className="bg-gray-200 text-gray-600 border border-gray-300">Name</th>
+                    <th className="bg-gray-200 text-gray-600 border border-gray-300">Elo</th>
+                    <th className="bg-gray-200 text-gray-600 border border-gray-300">Last Updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {rows}
+            </tbody> 
+        </table>
     )
 }
