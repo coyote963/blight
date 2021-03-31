@@ -7,7 +7,7 @@ interface PropType  {
 export function HeaderDisplay(props : PropType) {
     return (
         <div>
-            <h1  style={{fontFamily: "datale", whiteSpace: "nowrap"}} className="text-purple-900 font-display text-3xl sm:text-5xl xl:text-7xl m-10">{formatDataleRandom(props.content)} </h1>
+            <h1  style={{fontFamily: "datale", whiteSpace: "nowrap"}} className="text-navy dark:text-chestnut font-display text-3xl sm:text-5xl xl:text-7xl m-10">{formatDataleRandom(props.content)} </h1>
         </div>
     )
 }

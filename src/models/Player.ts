@@ -5,5 +5,7 @@ export interface Player {
     color: string;
     premium: string;
     hat: string;
+    clan_id: string;
+    clan_tag: string;
 }
 
