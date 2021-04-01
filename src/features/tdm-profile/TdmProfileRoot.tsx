@@ -52,8 +52,8 @@ export function TdmProfileRoot() {
             <h1 className="text-center text-navy dark:text-chestnut text-5xl font-bold uppercase border-grey mb-6 p-4">
               {player?.name[0]}
             </h1>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4">
-              <div className="p-5 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
+            <div className="grid grid-cols-4">
+              <div className="p-5 col-span-4 sm:col-span-2 lg:col-span-1 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
                 <h5 className="text-darkbrown dark:text-grulloshade">
                   Rank
                 </h5>
@@ -61,7 +61,7 @@ export function TdmProfileRoot() {
                   #{ tdmProfile!.ranking }
                 </h3>
               </div>
-              <div className="p-5 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
+              <div className="p-5 col-span-4 sm:col-span-2 lg:col-span-1 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
                 <h5 className="text-darkbrown dark:text-grulloshade">
                   Kills per round
                 </h5>
@@ -69,7 +69,7 @@ export function TdmProfileRoot() {
                 { Math.ceil(tdmProfile!.profile.kills / (tdmProfile!.profile.wins + tdmProfile!.profile.losses) * 1000) / 1000 }
                 </h3>
               </div>
-              <div className="p-5 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
+              <div className="p-5 col-span-4 sm:col-span-2 lg:col-span-1 border-solid border border-darkbrown dark:border-grulloshade bg-transparent shadow-sm">
                 <h5 className="text-darkbrown dark:text-grulloshade">
                   K/D ratio 
                 </h5>
@@ -77,7 +77,7 @@ export function TdmProfileRoot() {
                    { Math.ceil(tdmProfile!.profile.kills / tdmProfile!.profile.deaths * 1000) / 1000}
                 </h3>
               </div>
-              <div className="bg-transparent p-5 border-solid border border-darkbrown dark:border-grulloshade">
+              <div className="p-5 col-span-4 sm:col-span-2 lg:col-span-1 border-solid border border-darkbrown dark:border-grulloshade">
                 <h5 className="text-darkbrown dark:text-grulloshade">
                   Win Rate
                 </h5>
@@ -85,11 +85,11 @@ export function TdmProfileRoot() {
                    {Math.ceil(tdmProfile!.profile.wins / (tdmProfile!.profile.wins + tdmProfile!.profile.losses) * 1000) /10 }%
                 </h3>
               </div>
-              <div className="col-span-3 p-5 border-solid border border-darkbrown dark:border-grulloshade">
+              <div className="col-span-4 md:col-span-3 p-5 border-solid border border-darkbrown dark:border-grulloshade">
 
                 <TdmRatingChart id={id}/>
               </div>
-              <div className=" p-5 border-solid border border-darkbrown dark:border-grulloshade">
+               <div className=" p-5 col-span-4 md:col-span-1 border-solid border border-darkbrown dark:border-grulloshade">
                 <h1 className="text-7xl font-bold text-navy dark:text-chestnut text-center">{Math.ceil(tdmProfile?.profile.elo ?? 0)}</h1>
                 <h1 className="text-xl text-navy dark:text-chestnut text-center">{rankNames(convertRank(tdmProfile!.profile.elo))}</h1>
 
@@ -97,17 +97,20 @@ export function TdmProfileRoot() {
                   <BadgeImage elo={tdmProfile!.profile.elo} />
                 </span>
               </div>
-              <div className="p-5 border-solid border border-darkbrown dark:border-grulloshade col-span-2">
+              
+              <div className="col-span-4 md:col-span-2 p-5 border-solid border border-darkbrown dark:border-grulloshade ">
                 <TdmDonut id={id} /> 
               </div>
-              <div className="col-span-2 border-solid border border-darkbrown dark:border-grulloshade">
+              
+              <div className="col-span-4 md:col-span-2 border-solid border border-darkbrown dark:border-grulloshade">
                 <TdmLoadoutTable id={tdmProfile?.profile._id ?? ""}/>
               </div>
-              <div className=" divide-y-2 divide-darkbrown dark:divide-grulloshade border-solid border border-darkbrown dark:border-grulloshade col-span-1">
+              
+              <div className=" col-span-4 md:col-span-1 divide-y-2 divide-darkbrown dark:divide-grulloshade border-solid border border-darkbrown dark:border-grulloshade">
                 <PlayerView color={player!.color} hat={player!.hat}></PlayerView>
                 <TdmAdditionalInfo id={id} />
               </div>
-              <div className="p-5 border-solid border border-darkbrown dark:border-grulloshade col-span-3">
+              <div className="col-span-4 md:col-span-3 p-5 border-solid border border-darkbrown dark:border-grulloshade">
                 
                 <TdmRadar id={id} />
               

@@ -28,34 +28,34 @@ export const TdmAdditionalInfo = (props: TdmProps) => {
         <table className="w-full">
             <tbody>
 
-                <tr className="py-5">
-                    <td>Alternate Names</td>
-                    <td style={{textAlign: 'right'}}>{player?.name.slice(0,5).join(", ")}</td>
+                <tr>
+                    <td className="font-bold">Alternate Names</td>
+                    <td >{player?.name.slice(0,5).join(", ")}</td>
                 </tr>
-                <tr className="py-5">
-                    <td>Trueskill Rating</td>
-                    <td style={{textAlign: 'right'}}>{Math.ceil(tdmProfile?.profile.mu ?? 0)} 
+                <tr>
+                    <td className="font-bold">Trueskill Rating</td>
+                    <td >{Math.ceil(tdmProfile?.profile.mu ?? 0)} 
                         </td>
                 </tr>
-                <tr className="py-5">
-                    <td>Elo Rating</td>
-                    <td style={{textAlign: 'right'}}>{Math.ceil(tdmProfile?.profile.elo ?? 0)}</td>
+                <tr>
+                    <td className="font-bold">Elo Rating</td>
+                    <td >{Math.ceil(tdmProfile?.profile.elo ?? 0)}</td>
                 </tr>
-                <tr className="py-5">
-                    <td>Last Seen</td>
-                    <td style={{textAlign: 'right'}}>{formatDate(tdmProfile?.profile.last_updated ?? new Date()) }</td>
+                <tr>
+                    <td className="font-bold">Last Seen</td>
+                    <td >{formatDate(tdmProfile?.profile.last_updated ?? new Date()) }</td>
                 </tr>
-                <tr className="py-5">
-                    <td>First Seen</td>
-                    <td style={{textAlign: 'right'}}>{formatMongoDb(tdmProfile?.profile._id ?? "", 'lll')}</td>
+                <tr>
+                    <td className="font-bold">First Seen</td>
+                    <td >{formatMongoDb(tdmProfile?.profile._id ?? "", 'lll')}</td>
                 </tr>
-                <tr className="py-5">
-                    <td>Platform</td>
-                    <td style={{textAlign: 'right'}}>{player?.profile.platform === '0' ? 'Steam' : 'Gamejolt'}</td>
+                <tr>
+                    <td className="font-bold">Platform</td>
+                    <td >{player?.profile.platform === '0' ? 'Steam' : 'Gamejolt'}</td>
                 </tr>
-                <tr className="py-5">
-                    <td>Clan</td>
-                    <td style={{textAlign: 'right'}}>{player?.clan_tag}</td>
+                <tr>
+                    <td className="font-bold">Clan</td>
+                    <td >{player?.clan_tag}</td>
                 </tr>
                 
             </tbody>

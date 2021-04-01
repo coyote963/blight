@@ -32,7 +32,9 @@ export function Leaderboard() {
                     <td className="border border-b border-mediumbrown dark:border-grullo dark:text-grullo px-2 py-1 text-xs">{ (currentPage - 1 )*  pageSize + index + 1 }</td>
                     <td className="border border-b border-mediumbrown dark:border-grullo dark:text-grullo px-2 py-1 text-xs">
                         <Link to={`/profile/${player.player[0]._id}`} >
-                            {player.player[0].name[0]}
+                            <span className="text-darkgreen dark:text-lemon hover:underline">
+                                {player.player[0].name[0]}
+                            </span>
                         </Link>
                     </td>
                     <td className="border border-b border-mediumbrown dark:border-grullo dark:text-grullo px-2 py-1 text-xs">{Math.floor(player.elo)}</td>

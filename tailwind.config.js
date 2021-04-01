@@ -13,6 +13,7 @@ module.exports = {
         grullo: '#A2988F',
         grulloshade: '#90847A',
         celladon: '#A0E8AF',
+        darkgreen: '#28A443',
         lemon: '#F6FEAA'
       }
     },
