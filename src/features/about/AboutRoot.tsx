@@ -1,5 +1,4 @@
 import React from 'react'
-import { HeaderDisplay } from '../../app/HeaderDisplay'
 
 export function AboutRoot() {
   return (<div className="container mx-auto ">

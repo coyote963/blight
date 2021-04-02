@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  HashRouter
 } from "react-router-dom";
 import { TdmProfileRoot } from './features/tdm-profile/TdmProfileRoot';
 import { LeaderboardRoot } from './features/leaderboard/LeaderboardRoot';
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="bg-sand dark:bg-darkgrey min-h-screen">
 
-    <Router>
+    <HashRouter>
       <div>
         <nav>
           <div className="flex lg:flex-grow items-center">
@@ -55,7 +55,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
     </div>
   );
 }
