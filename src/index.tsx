@@ -5,11 +5,18 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Auth0Provider
+        domain="dev-qxllpa53.us.auth0.com"
+        clientId="f60tAG7ByXWxNSZfGpnTRMBBpVLKvzmd"
+        redirectUri={window.location.origin}
+      >
+        <App />
+      </Auth0Provider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
