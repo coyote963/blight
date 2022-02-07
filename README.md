@@ -16,6 +16,7 @@ On the backend side:
  - Endpoints for checking server statuses
  - Tokens authorization
  - Authentication
+ - Testing
 
 
 
