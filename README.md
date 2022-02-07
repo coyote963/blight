@@ -15,6 +15,7 @@ On the backend side:
  - Create endpoints for proxying server requests
  - Endpoints for checking server statuses
  - Tokens authorization
+ - Authentication
 
 
 
